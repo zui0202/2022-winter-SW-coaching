@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.swcoaching.member.MemberServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-09T10:14:09" hostname="bagjihyeui-MacBookAir.local" time="0.053">
+  <properties/>
+  <testcase name="ID로 회원 조회 한다" classname="com.example.swcoaching.member.MemberServiceTest" time="0.053"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

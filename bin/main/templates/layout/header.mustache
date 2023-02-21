@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html>
+<style>
+#searching {
+    position:relative;
+   left: 20px;
+}
+#userInfo{
+    position:absolute;
+    right: 50px;
+}
+</style>
+<head>
+    <title>Springboot Web Service</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+    <header class="p-3 bg-dark text-white">
+
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <h1><a href="/">Spring Web Service</a> </h1>
+
+                <div id = searching>
+                    <form name = "search-form" autocomplete="off">
+                        <select name="type" id = "type">
+                            <option selected value="">select search content </option>
+                            <option value="title" id = "title">Title</option>
+                            <option value="contents" id = "contents">Content</option>
+                            <option value="author" id = "author">Author</option>
+                        </select>
+                        <input type ="text" name ="keyword" id = "keyword" value = "">
+                        <button type="button" class="btn btn-primary" id="btn-showsearch">go!</button>
+                    </form>
+                </div>
+
+                <div class="text-end" id ="userInfo">
+
+                    {{#userName}}
+                        Logged in as: <span id="user">{{userName}}</span>
+                        <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                    {{/userName}}
+                    {{^userName}}
+                        <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+
+                    {{/userName}}
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+<body>
+<table class="table table-horizontal table-bordered" id="searchtable"></table>
